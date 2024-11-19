@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Personal Budget</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1>My Personal Budget</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Hello, <%= user.local.email %>!</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                       
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-primary">Unlink</a>
+                <% } else { %>
+                    <a href="/connect-local" class="btn btn-primary">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <h3>Budgets</h3>
+          <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <span class="originalCategory"><%= messages[i].name %></span>
+              <span class="originalAmount"><%= messages[i].amount %></span>
+              <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              <button class="editBtn btn btn-primary">Edit</button>
+            
+              <form class="editForm" style="display: none;">
+                <input type="text" name="newName" class="newName" placeholder="Category...">
+                <input type="number" name="newAmount" class="newAmount" placeholder="Amount...">
+                <button type="submit" class="editSubmitBtn btn btn-secondary">Submit</button>
+            </form>
+            </li>
+          <% } %>
+          </ul>
+
+          <h2>Create a new Budget</h2>
+          <form action="/messages" method="POST">
+            <input type="text" value="" name="name" placeholder="Category">
+            <input type="number" name="amount" placeholder="Amount">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
