@@ -1,16 +1,184 @@
-body{
-  padding-top:80px;
-  word-wrap:break-word;
-}
-img{
-  height: 200px;
-}
-
-li {
-  list-style: none;
-}
-
-ul {
-  padding: 0;
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #19381F, #4C934C);
+  color: #EEE82C;
   margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #EEE82C;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #91CB3E;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #53A548;
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Card Styles */
+.card {
+  background: #FFF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #19381F;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 30px;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #53A548, #91CB3E);
+  border: none;
+  color: #FFF;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #91CB3E, #53A548);
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background-color: #E57373;
+  color: #FFF;
+  border-radius: 30px;
+}
+
+.btn-danger:hover {
+  background-color: #EF5350;
+  transform: scale(1.05);
+}
+
+/* Form Inputs */
+input, textarea, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #53A548;
+  border-radius: 10px;
+  background-color: #F9F9F9;
+  color: #19381F;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #AAA;
+}
+
+input:focus {
+  outline: none;
+  border-color: #91CB3E;
+  box-shadow: 0 0 5px rgba(145, 203, 62, 0.5);
+}
+
+/* List Group */
+.list-group-item {
+  background: #FFF;
+  color: #19381F;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.list-group-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item .btn {
+  margin-left: 0.5rem;
+}
+
+/* Fun Elements */
+h1::after {
+  content: " 🚀";
+  color: #91CB3E;
+}
+
+/* Media Queries */
+
+/* Phone */
+@media (max-width: 576px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1.25rem;
+  }
+
+  input, button {
+      font-size: 0.9rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  h1 {
+      font-size: 2.2rem;
+  }
+
+  .card {
+      padding: 1rem;
+  }
+
+  .btn {
+      font-size: 1rem;
+      padding: 0.6rem 1.5rem;
+  }
+
+  input, button {
+      font-size: 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 993px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  .btn {
+      font-size: 1.1rem;
+      padding: 0.75rem 1.75rem;
+  }
+
+  .card {
+      padding: 2rem;
+  }
+
+  input, button {
+      font-size: 1.1rem;
+  }
 }

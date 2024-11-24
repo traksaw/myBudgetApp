@@ -10,7 +10,7 @@ const editSubmitBtns = document.querySelectorAll('.editSubmitBtn')
 
 Array.from(editBtn).forEach(element => {
   element.addEventListener('click', () => {
-    const budget = element.closest('.message')
+    const budget = element.closest('.messages')
     const editForm = budget.querySelector('.editForm')
     editForm.style.display = editForm.style.display === 'none' ? 'block' : 'none'
   })
@@ -19,7 +19,7 @@ Array.from(editBtn).forEach(element => {
 Array.from(editSubmitBtns).forEach(button => {
   button.addEventListener('click', (e) => {
     e.preventDefault()
-    const budgets = button.closest('.message')
+    const budgets = button.closest('.messages')
 
     console.log(budgets)
     const originalName = budgets.querySelector('.originalCategory').innerText
