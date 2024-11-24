@@ -22,9 +22,6 @@ My Personal Budget Tracker is a web application designed to help users manage th
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
