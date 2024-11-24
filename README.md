@@ -2,9 +2,17 @@
 
 My Personal Budget Tracker is a web application designed to help users manage their budgets efficiently. This project showcases the technical skills and technologies I applied during its development, from backend setup to creating an interactive and responsive user interface. It highlights my ability to build full-stack applications with authentication, database management, and dynamic front-end interactions.
 
+---
+
 <img width="1314" alt="Screenshot 2024-11-23 at 9 30 34 PM" src="https://github.com/user-attachments/assets/c481be67-1aea-487b-b286-1d452117765f">
 
+---
 
+## Check it out below
+
+https://personalbudget.up.railway.app/
+
+---
 
 
 ## Table of Contents
