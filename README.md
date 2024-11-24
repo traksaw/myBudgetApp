@@ -10,7 +10,7 @@ My Personal Budget Tracker is a web application designed to help users manage th
 
 ## Check it out below
 
-https://personalbudget.up.railway.app/
+[https://personalbudget.up.railway.app/](https://mybudgetapp.up.railway.app/)
 
 ---
 
